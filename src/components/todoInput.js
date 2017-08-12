@@ -8,7 +8,6 @@ export default class TodoInput extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.addTodo = this.addTodo.bind(this);
-    console.log("PROPS: ", props);
   }
 
   handleChange(e) {
@@ -26,11 +25,9 @@ export default class TodoInput extends React.Component {
   render() {
     return (
       <div>
-        <p>{ this.state.value }</p>
         <input type="text" value={this.state.value} onChange={this.handleChange} />
         <button className="btn btn-primary" onClick={() => this.addTodo(this.state.value)}>Submit</button>
       </div>
-
     );
   }
 }

@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/header';
 import TodoInput from './components/todoInput';
+import TodoItem from './components/todoItem';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: []
+      todos: [
+        "Make dinner tonight!",
+        "Fold the laundry.",
+        "Learn to make a React app!"
+      ]
     };
 
     this.addTodo = this.addTodo.bind(this);
@@ -25,6 +30,11 @@ class App extends Component {
         <div className="todo-wrapper">
           <Header />
           <TodoInput todoText="" addTodo={this.addTodo} todos={this.state.todos}/>
+          <ul>
+            {
+              this.state.todos.map((todo) => <TodoItem todo={todo}/>)
+            }
+          </ul>
         </div>
       </div>
     );
