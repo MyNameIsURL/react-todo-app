@@ -1,0 +1,27 @@
+.btn {
+  color: #FFFFFF;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.btn-primary {
+  background-color: rgba(73, 204, 249, 1.0);
+}
+
+input {
+  border: none;
+  border-top: 2px solid rgba(73, 204, 249, 1.0);
+  border-bottom: 2px solid rgba(73, 204, 249, 1.0);
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 1em;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+  border-top: 2px solid rgba(73, 204, 249, 1.0);
+  border-bottom: 2px solid rgba(73, 204, 249, 1.0);
+}
