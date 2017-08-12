@@ -16,8 +16,11 @@ export default class TodoInput extends React.Component {
   }
 
   addTodo(todo) {
-    this.props.addTodo(todo);
-    this.setState({value: ''});
+    // Ensure a todo was actually entered before submitting
+    if (todo.length > 0) {
+      this.props.addTodo(todo);
+      this.setState({value: ''});
+    }
   }
 
   render() {
